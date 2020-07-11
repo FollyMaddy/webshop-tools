@@ -42,6 +42,8 @@ sudo usermod -a -G lpadmin pi
 
 5)
 
+Go to the webpage of cups an add printer :
+
 links2 -force-html http://localhost:631/admin
 
 -Add new printer
