@@ -54,3 +54,21 @@ links2 -force-html http://localhost:631/admin
 
 -Dymo should be installable
 
+6)
+
+Install lpr to send text or picture to the printer
+
+More info over lpr : https://www.computerhope.com/unix/ulpr.htm
+
+sudo apt-get install lpr
+
+Related commands :
+hostname — Set or print the hostname of system.
+lp — Print a file on the System V operating system.
+lpc — Control line printers.
+lpq — List the status of available printers.
+lprm — Remove requests from the print queue.
+lpstat — List the status of the LP print services.
+mail — Read, compose, and manage mail.
+
+
