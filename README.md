@@ -42,7 +42,9 @@ sudo usermod -a -G lpadmin pi
 
 5)
 
-Go to the webpage of cups an add printer :
+Go to the webpage of cups and add printer :
+
+Connect your labelprinter to the USB !
 
 links2 -force-html http://localhost:631/admin
 
