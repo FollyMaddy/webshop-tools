@@ -79,6 +79,10 @@ lpstat — List the status of the LP print services.
 mail — Read, compose, and manage mail.
 
 
+7)
+
+Set printer for lp or lpr as default or get printer name :
+
 Test met HP laserjet p2015 :
 
 lpr werkte steeds niet terwijl een test uit cups en libreoffice wel werkte daarom doorgezocht.
@@ -86,8 +90,6 @@ lpr werkte steeds niet terwijl een test uit cups en libreoffice wel werkte daaro
 Hier zag ik hoe ik de printer kan toevoegen in de commandline of hoe ik de printer default kan maken :
 
 https://www.cups.org/doc/options.html
-
-set printer for lp or lpr as default or get printer name :
 
 pi@raspberrypi:~ $ lpstat -p -d
 
