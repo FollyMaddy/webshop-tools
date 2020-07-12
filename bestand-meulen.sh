@@ -39,7 +39,7 @@ do
         echo $listpdf
         for files in $listpdf
         do
-            lpr $files
+            lp $files
             mv $workdir/$files $donedir
         done    
     fi
