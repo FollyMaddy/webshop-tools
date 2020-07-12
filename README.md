@@ -40,6 +40,8 @@ Add the pi user to the printer admin group to be allow to login to the printer a
 
 sudo usermod -a -G lpadmin pi
 
+(i think it's not nessesary if you login as root, but i don't know if then the user pi can print)
+
 5)
 
 Go to the webpage of cups and add printer :
