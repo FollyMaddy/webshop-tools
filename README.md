@@ -5,7 +5,7 @@ Example and working scripts for orderpicking automation
 
 # How to add Dymo labelprinter on RPI 1 to 4 on RPI-OS Lite(buster)
 
-# Websites and used for this updated guide (year 2020)
+# Websites used for this updated guide (year 2020)
 
 - https://www.hmazter.com/2013/05/raspberry-pi-printer-server-for-labelwriter/
 
