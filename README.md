@@ -21,6 +21,8 @@ Example and working scripts for orderpicking automation
 
 - https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html
 
+- when cups is installed, there is also a help option on the Cups-printer-server-software webpage
+
 
 # Supported printers
 
