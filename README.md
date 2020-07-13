@@ -1,6 +1,10 @@
 # webshop-tools
-Example and working scripts for orderpicking automation
 
+Example and working scripts for orderpicking automation :
+
+bestand-meulen.sh (checks in directory, prints file from in directory, put's file to out directory
+
+lapelprinter.sh (only usable for my private use, but can be used as an example script)
 
 
 # How to add Dymo labelprinter on RPI 1 to 4 on RPI-OS Lite(buster)
@@ -152,7 +156,7 @@ lp hello-world.txt
 Enjoy !
 
 
-# more steps for our script
+# more steps for my script
 
 # step 8
 
