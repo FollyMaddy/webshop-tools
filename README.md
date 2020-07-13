@@ -23,6 +23,10 @@ Example and working scripts for orderpicking automation
 
 - when cups is installed, there is also a help option on the Cups-printer-server-software webpage
 
+  Possible future work : Is it possible to connect Zebra labelprinter in stead of Dymo ? :
+  
+  - https://www.raspberrypi.org/forums/viewtopic.php?p=724444
+
 
 # Supported printers
 
@@ -64,7 +68,7 @@ sudo usermod -a -G lpadmin pi
 
 Add printer :
 
-Connect your labelprinter to the USB-port!
+Connect your labelprinter to the USB-port !
 
 Go to the webpage of cups (with a graphic OS you can use a normal webbrowser) :
 
