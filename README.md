@@ -44,11 +44,9 @@ sudo apt-get update; sudo apt-get upgrade -y
 
 # step 2
 
-Install cups,Dymo-drive and links2 terminal-webbrowser :
+Install Cups-printer-server-software, Dymo-driver and links2 terminal-webbrowser :
 
-Install cups libraries and other necessary libraries to build
-
-sudo apt-get install libcups2-dev libcupsimage2-dev cups cups-client rinter-driver-dymo links2
+sudo apt-get install libcups2-dev libcupsimage2-dev cups cups-client printer-driver-dymo links2
 
 
 # step 3
@@ -60,24 +58,35 @@ sudo usermod -a -G lpadmin pi
 
 # step 4
 
-Go to the webpage of cups and add printer :
+Add printer :
 
 Connect your labelprinter to the USB-port!
 
+Go to the webpage of cups (with a graphic OS you can use a normal webbrowser) :
+
 links2 -force-html http://localhost:631/admin
 
-- Add new printer
+- Add new printer 
 
 - login with your normal username and password
 
-- Dymo should be installable
+- Dymo should be installable in about 4 steps
 
+  (use enter to select and see an X)
+  
+  * select printer then continue
+  
+  * select driver then continue
+  
+  * set default settings then continue
+  
+  * see your added printer in ""Manage Printers"
 
 # step 5
 
 Install lpr-package to send text or picture to the printer
 
-More info over lpr : https://www.computerhope.com/unix/ulpr.htm
+( we are going to use "lp" from this package, not "lpr" ! )
 
 sudo apt-get install lpr
 
