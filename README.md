@@ -5,7 +5,9 @@ Example and working scripts for orderpicking automation
 
 # How to add Dymo labelprinter on RPI 1 to 4 on RPI-OS Lite(buster)
 
-# Websites used for this updated guide (year 2020)
+# Sources used for this guide (year 2020)
+
+- When cups is installed, go to http://localhost:631/help/
 
 - https://www.hmazter.com/2013/05/raspberry-pi-printer-server-for-labelwriter/
 
@@ -21,7 +23,6 @@ Example and working scripts for orderpicking automation
 
 - https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html
 
-- when cups is installed, there is also a help option on the Cups-printer-server-software webpage
 
   Possible future work : Is it possible to connect Zebra labelprinter in stead of Dymo ? :
   
