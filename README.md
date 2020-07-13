@@ -31,7 +31,7 @@ Example and working scripts for orderpicking automation
   - https://pypi.org/project/zebra/0.0.5/#description
 
 
-# Supported printers
+# Supported printers for printer-driver-dymo :
 
 CUPS filter driver for various DYMO label printers: LabelManager 400, 450, PC,
 
@@ -46,6 +46,23 @@ This package contains the CUPS filter driver and the compressed PPDs for the
 supported label printers.
 
 
+# Related commands for lpr-package :
+
+hostname — Set or print the hostname of system.
+
+lp — Print a file on the System V operating system.
+
+lpc — Control line printers.
+
+lpq — List the status of available printers.
+
+lprm — Remove requests from the print queue.
+
+lpstat — List the status of the LP print services.
+
+mail — Read, compose, and manage mail.
+
+
 # step 1
 
 Update your fresh img :
@@ -55,9 +72,9 @@ sudo apt-get update; sudo apt-get upgrade -y
 
 # step 2
 
-Install Cups-printer-server-software, Dymo-driver and links2 terminal-webbrowser :
+Install cups-printer-server-software, dymo-driver, lpr-commandline-package and links2 terminal-webbrowser :
 
-sudo apt-get install libcups2-dev libcupsimage2-dev cups cups-client printer-driver-dymo links2
+sudo apt-get install libcups2-dev libcupsimage2-dev cups cups-client printer-driver-dymo lpr links2
 
 
 # step 3
@@ -93,32 +110,8 @@ links2 -force-html http://localhost:631/admin
   
   * see your added printer in ""Manage Printers"
 
+
 # step 5
-
-Install lpr-package to send text or picture to the printer
-
-( we are going to use "lp" from this package, not "lpr" ! )
-
-sudo apt-get install lpr
-
-Related commands :
-
-hostname — Set or print the hostname of system.
-
-lp — Print a file on the System V operating system.
-
-lpc — Control line printers.
-
-lpq — List the status of available printers.
-
-lprm — Remove requests from the print queue.
-
-lpstat — List the status of the LP print services.
-
-mail — Read, compose, and manage mail.
-
-
-# step 6
 
 Get printer name :
 
@@ -135,7 +128,7 @@ Now you can check if default printer is set :
 lpstat -p -d
 
 
-# step 7
+# step 6
 
 Test your setup and printer :
 
@@ -153,15 +146,15 @@ echo hello world > hello-world.txt
 
 lp hello-world.txt
 
-# step 8 
+
+# step 7
 
 Enjoy !
 
+
 # more steps for our script
 
-# step 9
-
-Start a script at boot :
+# step 8
 
 Edit boot options with (CLI with autologin):
 
@@ -169,9 +162,16 @@ Edit boot options with (CLI with autologin):
 
 sudo raspi-config
 
-Edit .bashrc with nano :
+
+Edit .bashrc with nano to add your script for startup at boot :
 
 nano .bashrc
+ 
+ add stuff at the bottum of the text file :
+
+ - add the variable for website, key and printer(number)
+ 
+ - add your script
 
 
 
