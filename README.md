@@ -24,7 +24,7 @@ Example and working scripts for orderpicking automation
 - https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html
 
 
-  Possible future work : Is it possible to connect Zebra labelprinter in stead of Dymo ? :
+  Possible future work : Is it possible to connect Zebra labelprinter instead of Dymo ? :
   
   - https://www.raspberrypi.org/forums/viewtopic.php?p=724444
   
