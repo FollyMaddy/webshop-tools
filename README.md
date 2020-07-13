@@ -26,6 +26,8 @@ Example and working scripts for orderpicking automation
   Possible future work : Is it possible to connect Zebra labelprinter in stead of Dymo ? :
   
   - https://www.raspberrypi.org/forums/viewtopic.php?p=724444
+  
+  - https://pypi.org/project/zebra/0.0.5/#description
 
 
 # Supported printers
