@@ -1,20 +1,26 @@
 # webshop-tools
 Example and working scripts for orderpicking automation
 
-1)
 
-Install dymo on RPI :
 
-Install cups libraries and other necessary libraries to build
+# How to add Dymo labelprinter on RPI 1 to 4 on RPI-OS Lite(buster)
 
-sudo apt-get install libcups2-dev libcupsimage2-dev g++ cups cups-client
+# websites used for this guide
 
-2)
-Install dymo cups driver (more info on https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html ):
+- https://www.cups.org/doc/options.html
 
-sudo apt-get install printer-driver-dymo
+- http://www.tldp.org/HOWTO/Printing-HOWTO/index.html
 
-Supported printers :
+- https://forums.centos.org/viewtopic.php?t=214
+
+- https://argthtjtr.blogspot.com/2019/03/lp-vs-lpr-what-to-use-in-case-of-cups.html
+
+- https://forum.manjaro.org/t/aur-en-trouble-with-dymo-cups-drivers/105440/5
+
+- https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html
+
+
+# Supported printers
 
 CUPS filter driver for various DYMO label printers: LabelManager 400, 450, PC,
 
@@ -28,21 +34,31 @@ This package contains the CUPS filter driver and the compressed PPDs for the
 
 supported label printers.
 
-3)
 
-Install terminal webbrowser for "only terminal OS" also usable in graphic OS :
+# step 1
 
-sudo apt-get install links2
+Update your fresh img :
 
-4)
+sudo apt-get update; sudo apt-get upgrade -y
+
+
+# step 2
+
+Install cups,Dymo-drive and links2 terminal-webbrowser :
+
+Install cups libraries and other necessary libraries to build
+
+sudo apt-get install libcups2-dev libcupsimage2-dev cups cups-client rinter-driver-dymo links2
+
+
+# step 3
 
 Add the pi user to the printer admin group to be allow to login to the printer admin :
 
 sudo usermod -a -G lpadmin pi
 
-(i think it's not nessesary if you login as root, but i don't know if then the user pi can print)
 
-5)
+# step 4
 
 Go to the webpage of cups and add printer :
 
@@ -50,15 +66,16 @@ Connect your labelprinter to the USB-port!
 
 links2 -force-html http://localhost:631/admin
 
--Add new printer
+- Add new printer
 
--login with your normal username and password
+- login with your normal username and password
 
--Dymo should be installable
+- Dymo should be installable
 
-6)
 
-Install lpr to send text or picture to the printer
+# step 5
+
+Install lpr-package to send text or picture to the printer
 
 More info over lpr : https://www.computerhope.com/unix/ulpr.htm
 
@@ -81,48 +98,60 @@ lpstat — List the status of the LP print services.
 mail — Read, compose, and manage mail.
 
 
-7)
+# step 6
 
-Set printer for lp or lpr as default or get printer name :
+Get printer name :
 
-Test met HP laserjet p2015 :
+lpstat -p -d
 
-lpr werkte steeds niet terwijl een test uit cups en libreoffice wel werkte daarom doorgezocht.
+Set printer for lp or lpr as default :
 
-Hier zag ik hoe ik de printer kan toevoegen in de commandline of hoe ik de printer default kan maken :
+lpoptions -d DYMO_LabelWriter_4XL
 
-https://www.cups.org/doc/options.html
+(a text file called lpotions in /home/pi/.cups/ contains the default printer so you can also make a textfile with printername instead.)
 
-pi@raspberrypi:~ $ lpstat -p -d
+Now you can check if default printer is set :
 
-printer HP_LaserJet_P2015_Series is idle.  enabled since za 11 jul 2020 21:38:25 CEST
+lpstat -p -d
 
-no system default destination
 
-pi@raspberrypi:~ $ lpoptions -d HP_LaserJet_P2015_Series
+# step 7
 
-copies=1 device-uri=usb://HP/LaserJet%20P2015%20Series?serial=00CNBW7CX7D3 finishings=3 job-cancel-after=10800 job-hold-until=no-hold job-priority=50 job-sheets=none,none marker-change-time=0 number-up=1 printer-commands=none printer-info='HP LaserJet P2015 Series' printer-is-accepting-jobs=true printer-is-shared=false printer-is-temporary=false printer-location=Kantoor22 printer-make-and-model='HP LaserJet p2015 Series pcl3, hpcups 3.18.12' printer-state=3 printer-state-change-time=1594496305 printer-state-reasons=none printer-type=2134044 printer-uri-supported=ipp://localhost/printers/HP_LaserJet_P2015_Series
+Test your setup and printer :
 
-pi@raspberrypi:~ $ lpstat -p -d
+In my setup the "lpr command" did not work, but tests from cups and libreoffice did work.
 
-printer HP_LaserJet_P2015_Series is idle.  enabled since za 11 jul 2020 21:38:25 CEST
+The command "lp" can also be used, This command worked for me !
 
-system default destination: HP_LaserJet_P2015_Series
+Print an empty label :
 
-Oplossing :
+echo | lp
 
-lp werkt :)
+Create and print a text file :
 
-!!!! lpr werkt niet !!!!
+echo hello world > hello-world.txt
 
-pi@raspberrypi:~ $ lpr scan2label.php
+lp hello-world.txt
 
-pi@raspberrypi:~ $ lpr -P HP_LaserJet_P2015_Series scan2label.php
+# step 8 
 
-lpr: HP_LaserJet_P2015_Series: unknown printer
+Enjoy !
 
-pi@raspberrypi:~ $ lp scan2label.php
+# more steps for our script
 
-request id is HP_LaserJet_P2015_Series-5 (1 file(s))
+# step 9
+
+Start a script at boot :
+
+Edit boot options with (CLI with autologin):
+
+(perhaps you also want to change your keyboard settings etc)
+
+sudo raspi-config
+
+Edit .bashrc with nano :
+
+nano .bashrc
+
 
 
