@@ -198,7 +198,7 @@ or (equivalent)
 
 . labelprinter/labelprinter.sh
 
-This reads and executes the script in the environment of the current shell (or in this case script)
+This reads and executes the script in the environment of the current shell (or in this case, a script)
 
 
 
