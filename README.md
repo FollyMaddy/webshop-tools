@@ -34,6 +34,14 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   - https://pypi.org/project/zebra/0.0.5/#description
 
+  Possible future work : How can we exchange variables :
+  
+  - https://stackoverflow.com/questions/26902992/sharing-variables-between-shell-scripts
+  
+  Possible future work : How can we add a printer in the commandline :
+  
+  - https://blog.ostermiller.org/ubuntu-printer-install-command-line/
+
 
 # Supported printers for printer-driver-dymo :
 
