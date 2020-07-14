@@ -171,11 +171,35 @@ Edit .bashrc with nano to add your script for startup at boot :
 
 nano .bashrc
  
- add stuff at the bottum of the text file :
-
- - add the variable for website, key and printer(number)
+add stuff at the bottum of t.bashrc :
  
- - add your script
+ printer = 1 # printer number variable
+ 
+ bash labelprinter/labelprinter.sh $printer
+
+
+Add the variables $website and $key in the labelprinter.sh script:
+
+nano labelprinter/labelprinter.sh
+
+We could also put all variable in the .bashrc and read them as "option variables" in the script like we do with $printer
+
+
+
+# For possible future work, not recommended to use at this stage !
+
+Variables earlier added in a first script are, without any good solution, not readable in a second script.
+
+We could use something like this :
+
+source labelprinter/labelprinter.sh
+
+or (equivalent)
+
+. labelprinter/labelprinter.sh
+
+This reads and executes the script in the environment of the current shell (or in this case script)
+
 
 
 
