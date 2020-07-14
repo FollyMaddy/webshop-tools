@@ -28,15 +28,19 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
 - https://debian.pkgs.org/10/debian-main-armhf/printer-driver-dymo_1.4.0-8_armhf.deb.html
 
 
+  How can we exchange variables within scripts :
+  
+  - https://stackoverflow.com/questions/9772036/pass-all-variables-from-one-shell-script-to-another
+  
+  - https://stackoverflow.com/questions/26902992/sharing-variables-between-shell-scripts
+
+
   Possible future work : Is it possible to connect Zebra labelprinter instead of Dymo ? :
   
   - https://www.raspberrypi.org/forums/viewtopic.php?p=724444
   
   - https://pypi.org/project/zebra/0.0.5/#description
 
-  Possible future work : How can we exchange variables :
-  
-  - https://stackoverflow.com/questions/26902992/sharing-variables-between-shell-scripts
   
   Possible future work : How can we add a printer in the commandline :
   
@@ -196,18 +200,34 @@ We could also put all variable in the .bashrc and read them as "option variables
 
 # For possible future work, not recommended to use at this stage !
 
-Variables earlier added in a first script are, without any good solution, not readable in a second script.
+- Variables earlier added in a first script are, without any good solution, not readable in a second script.
 
-We could use something like this :
+  We could add somthing like this in .bashrc :
 
-source labelprinter/labelprinter.sh
+  export website="https://www.etc....."
 
-or (equivalent)
+  export key=
 
-. labelprinter/labelprinter.sh
+  bash labelprinter/labelprinter.sh
 
-This reads and executes the script in the environment of the current shell (or in this case, a script)
+  # Or
 
+  We could add something like this in .bashrc :
 
+  website="https://www.etc....."
+
+  key=.....
+
+  source labelprinter/labelprinter.sh
+
+  or (equivalent)
+
+  . labelprinter/labelprinter.sh
+
+  (This reads and executes the script in the environment of the current shell (or in this case, a script))
+
+  # Also possible
+
+  It's also possible to add the printernr var outside the labelprinter.sh script with for example "export"
 
 
