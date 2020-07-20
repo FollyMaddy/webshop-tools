@@ -45,7 +45,12 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   Possible future work : How can we add a printer in the commandline :
   
   - https://blog.ostermiller.org/ubuntu-printer-install-command-line/
-
+  
+  Possible future work : How can we add a ramdrive to prefent SD-card wear out :
+  
+  (Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)
+  
+  - https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi
 
 # Supported printers for printer-driver-dymo :
 
