@@ -42,7 +42,7 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   
   
-  ~~Possible future work~~ : **How can we add a ramdrive to prefent SD-card wear out :**
+  ~~Possible future work~~ : **How can we add a ramdrive to prefent SD-card wear out ?:**
   
     *We have to do the following:* credits to : https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi
     
