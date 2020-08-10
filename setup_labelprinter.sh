@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo make fresh image ready for labelprinting in 10 steps
+echo "make fresh image ready for labelprinting in 10 steps"
 
 echo "step 1 : update image"
 sudo apt-get update
