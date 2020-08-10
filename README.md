@@ -41,14 +41,32 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   
   
-  Possible future work : How can we add a ramdrive to prefent SD-card wear out :
+  ~~Possible future work~~ : *How can we add a ramdrive to prefent SD-card wear out :*
+  
+    **We have to do the following:**
+    
+    mkdir /home/pi/in (if not already exists)
+    
+    Then edit the fstab file by: 'sudo nano /etc/fstab'
+    
+    and add the line: 'tmpfs /home/pi/in tmpfs nodev,nosuid,size=5M 0 0'
+    
+    Then edit the .bashrc file by: 'sudo nano .bashrc'
+   
+    and add the line: 'sudo mount -a'
+    
+    (if not working add this line on the second line in the labelprinter script)
+    
+    
   
   (Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)
   
   - (https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi)
   
   
-~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
+  
+  
+  ~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
     
     **Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups**
     
