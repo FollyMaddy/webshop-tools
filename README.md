@@ -68,6 +68,10 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   ~~Possible future work~~ : **Is it possible to connect Zebra labelprinter instead of Dymo ? :**
     
     *Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups*
+    
+    (Tested on RPI1, Not OK, Driver problem, failure with install in Cups)
+    
+    (Tested on RPI2, OK)
       
   - ~~(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)~~
   
@@ -206,24 +210,27 @@ Edit boot options with (CLI with autologin):
 sudo raspi-config
 
 
+Put labelprinter.sh script in /home/pi/
+
+
 Edit .bashrc with nano to add your script for startup at boot :
 
 nano .bashrc
  
-add stuff at the bottum of t.bashrc :
+add stuff at the bottum of t.bashrc : 
  
- printer = 1 # printer number variable
+ printer = 1 # printer number variable (newlabels.php is the same as newlabels1.php)
  
- bash labelprinter/labelprinter.sh $printer
+ bash labelprinter.sh $printer
 
 
 Add the variables $website and $key in the labelprinter.sh script:
 
-nano labelprinter/labelprinter.sh
+nano labelprinter.sh
 
 We could also put all variable in the .bashrc and read them as "option variables" in the script like we do with $printer
 
-
+Or :
 
 # For possible future work, not recommended to use at this stage !
 
