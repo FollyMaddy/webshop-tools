@@ -35,6 +35,7 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   - https://stackoverflow.com/questions/26902992/sharing-variables-between-shell-scripts
 
 
+
   Possible future work : How can we add a printer in the commandline :
   
   - https://blog.ostermiller.org/ubuntu-printer-install-command-line/
@@ -43,7 +44,7 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   ~~Possible future work~~ : **How can we add a ramdrive to prefent SD-card wear out :**
   
-    *We have to do the following:*
+    *We have to do the following:* credits to : https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi
     
     - mkdir /home/pi/in (if not already exists)
     
@@ -56,12 +57,8 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
     and add the line: 'sudo mount -a'
     
     (if not working add this line on the second line in the labelprinter script instead)
-    
-    
+        
     ~~(Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)~~
-  
-  - ~~(https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi)~~
-  
   
   
   
@@ -77,6 +74,7 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   - ~~(https://pypi.org/project/zebra/0.0.5/#description)~~
   
+
 
 # Supported printers for printer-driver-dymo :
 
