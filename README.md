@@ -55,13 +55,12 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
    
     and add the line: 'sudo mount -a'
     
-    (if not working add this line on the second line in the labelprinter script)
+    (if not working add this line on the second line in the labelprinter script instead)
     
     
+    ~~(Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)~~
   
-  (Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)
-  
-  - (https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi)
+  - ~~(https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi)~~
   
   
   
@@ -69,12 +68,10 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   ~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
     
     **Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups**
-    
-    links are now obsolete (kept in readme for backup) :
+      
+  - ~~(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)~~
   
-  - *(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)*
-  
-  - *(https://pypi.org/project/zebra/0.0.5/#description)*
+  - ~~(https://pypi.org/project/zebra/0.0.5/#description)~~
   
 
 # Supported printers for printer-driver-dymo :
