@@ -41,17 +41,17 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   
   
-  ~~Possible future work~~ : *How can we add a ramdrive to prefent SD-card wear out :*
+  ~~Possible future work~~ : **How can we add a ramdrive to prefent SD-card wear out :**
   
-    **We have to do the following:**
+    *We have to do the following:*
     
-    mkdir /home/pi/in (if not already exists)
+    - mkdir /home/pi/in (if not already exists)
     
-    Then edit the fstab file by: 'sudo nano /etc/fstab'
+    - Then edit the fstab file by: 'sudo nano /etc/fstab'
     
     and add the line: 'tmpfs /home/pi/in tmpfs nodev,nosuid,size=5M 0 0'
     
-    Then edit the .bashrc file by: 'sudo nano .bashrc'
+    - Then edit the .bashrc file by: 'sudo nano .bashrc'
    
     and add the line: 'sudo mount -a'
     
@@ -65,9 +65,9 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   
   
   
-  ~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
+  ~~Possible future work~~ : **Is it possible to connect Zebra labelprinter instead of Dymo ? :**
     
-    **Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups**
+    *Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups*
       
   - ~~(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)~~
   
