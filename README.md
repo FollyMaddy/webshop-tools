@@ -48,11 +48,11 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
   - (https://www.domoticz.com/wiki/Setting_up_a_RAM_drive_on_Raspberry_Pi)
   
   
-    ~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
+~~Possible future work~~ : *Is it possible to connect Zebra labelprinter instead of Dymo ? :*
     
     **Zebra labelprinter ZTC_GK420d now works with "Zebra ZPL labelprinter" driver in cups**
     
-    links are obsolete :
+    links are now obsolete (kept in readme for backup) :
   
   - *(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)*
   
