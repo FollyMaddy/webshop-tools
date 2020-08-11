@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "make fresh image ready for labelprinting in 10 steps"
+echo "run it only once to prefent double txt in files !"
 
 echo "step 1 : update image"
 sudo apt-get update
@@ -23,9 +24,12 @@ echo "step 6 : labelprinter test is skipped"
 
 echo "step 7 : just a few more steps !"
 
-echo "step 8 : install labelprinter script, add stuff to .bashrc"
+echo "step 8 : add ramdrive, install labelprinter script, add stuff to .bashrc"
+mkdir /home/pi/in
+echo "tmpfs /home/pi/in tmpfs nodev,nosuid,size=5M 0 0" | sudo tee -a /etc/fstab
 curl https://raw.githubusercontent.com/FollyMaddy/webshop-tools/master/labelprinter.sh /home/pi/labelprinter.sh
 #change printernumber to your needs
+echo "mount -a" >> /home/pi/.bashrc
 echo "printer = 3" >> /home/pi/.bashrc
 echo "bash labelprinter.sh \$printer" >> /home/pi/.bashrc
 
