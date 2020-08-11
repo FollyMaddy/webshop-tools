@@ -51,14 +51,10 @@ lapelprinter.sh (only usable for my private use, but can be used as an example s
     - Then edit the fstab file by: 'sudo nano /etc/fstab'
     
     and add the line: 'tmpfs /home/pi/in tmpfs nodev,nosuid,size=5M 0 0'
-    
-    ~~- Then edit the .bashrc file by: 'sudo nano .bashrc'~~
+        
+    - Then edit the .bashrc file by: '~~sudo~~ nano .bashrc'
    
-    ~~and add the line: 'sudo mount -a'~~
-    
-    - Then edit the .bashrc file by: 'nano .bashrc'
-   
-    and add the line: 'mount -a'    
+    and add the line: '~~sudo~~ mount -a'    
     
     (if not working add 'sudo' or put this line on the second line in the labelprinter script instead)
         
