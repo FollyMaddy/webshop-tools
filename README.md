@@ -6,6 +6,8 @@ bestand-meulen.sh (checks in directory, prints file from in directory, put's fil
 
 lapelprinter.sh (only usable for my private use, but can be used as an example script)
 
+setuplblprint.sh (only usable for my private use, but can be used as an example script)
+
 
 # How to add Dymo labelprinter on RPI 1 to 4 on RPI-OS Lite(buster)
 
