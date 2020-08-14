@@ -1,6 +1,6 @@
 # webshop-tools
 
-Working and example scripts for orderpicking automation :
+Working- and example scripts for orderpicking automation :
 
 bestand-meulen.sh (checks in directory, prints file from in directory, put's file to out directory
 
