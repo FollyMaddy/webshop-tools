@@ -170,6 +170,10 @@ Set printer for lp or lpr as default :
 
 lpoptions -d DYMO_LabelWriter_4XL
 
+or
+
+lpoptions -d Zebra_Technologies_ZTC_GK420d
+
 (a text file called lpotions in /home/pi/.cups/ contains the default printer so you can also make a textfile with printername instead.)
 
 Now you can check if default printer is set :
@@ -221,7 +225,7 @@ nano .bashrc
  
 add stuff at the bottum of t.bashrc : 
  
- printer = 1 # printer number variable (newlabels.php is the same as newlabels1.php)
+ printer=1 # printer number variable (newlabels.php is the same as newlabels1.php)
  
  bash labelprinter.sh $printer
 
