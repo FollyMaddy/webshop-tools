@@ -56,11 +56,10 @@ Only usable for my private use, but can be used as an example script:
     
     and add the line: 'tmpfs /home/pi/in tmpfs nodev,nosuid,size=5M 0 0'
         
-    - Then edit the .bashrc file by: '~~sudo~~ nano .bashrc'
+    - Then edit the .bashrc file by: '~~sudo~~ nano .bashrc' (!!!perhaps this does not work, I added this in my labelprinter.sh script)
    
-    and add the line: '~~sudo~~ mount -a'    
+    and add the line: 'sudo mount -a' (!!!perhaps this does not work, I added this in my labelprinter.sh script)
     
-    (if not working add 'sudo' or put this line on the second line in the labelprinter script instead)
         
     ~~(Perhaps we also could use lp to print a file directly from a website, but it's uncertain if the file is then downloaded into the RAM, into a tmp directory or pushed directly to the printer)~~
   
