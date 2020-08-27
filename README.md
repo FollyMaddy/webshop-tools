@@ -73,6 +73,8 @@ Only usable for my private use, but can be used as an example script:
     (Tested on RPI1, Not OK, Driver problem, failure with install in Cups)
     
     (Tested on RPI2, OK)
+    
+    (Tested on RPI4, OK)
       
   - ~~(https://www.raspberrypi.org/forums/viewtopic.php?p=724444)~~
   
