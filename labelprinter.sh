@@ -32,8 +32,9 @@
 
 #---
 #!!!seems that strings can not be used, tested in Version 2 (WIP) !!!
-#for now, fill in the websitename and key in lines 46 and 52 !
+#for now, fill in the websitename and key in lines 50 and 56 !
 #if no Raspberry Pi is used, make sure u make the "in" directory
+#if no Raspberry Pi is used, use "lpr" instead of "lp" in line 70
 #---
 
 #add ramdrive on Raspberry Pi 

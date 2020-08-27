@@ -41,10 +41,10 @@ sudo usermod -a -G lpadmin pi
 
 echo "step 4 : you have to add labelprinter manually"
 
-#echo "step 5 : Set printer for lp or lpr as default"
+#echo "step 5 : Set Zebra printer for lp or lpr as default"
 #echo "Default DYMO_LabelWriter_4XL" > /home/pi/.cups/lpoptions
 #or
-#echo "Default Zebra...." > /home/pi/.cups/lpoptions
+echo "Default Zebra_Technologies_ZTC_GK420d" > /home/pi/.cups/lpoptions
 
 echo "step 6 : labelprinter test is skipped"
 
